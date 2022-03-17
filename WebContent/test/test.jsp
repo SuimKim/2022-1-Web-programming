@@ -7,7 +7,6 @@
 	<title>테스트입니닷</title>
 </head>
 <body>
-	테스트
-	<h2>잘되나..klll</h2>
+	<h2>umm..ddffjgdsssf</h2>
 </body>
 </html>
