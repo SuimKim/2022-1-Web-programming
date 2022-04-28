@@ -13,7 +13,6 @@
   String pwd = request.getParameter("pwd");    // String 객체에 받아온 비밀번호 값 저장 
   String name = request.getParameter("name");  // String 객체에 받아온 이름 값 저장
   String birth = request.getParameter("birth");
-  String gender = request.getParameter("gender");
   
 
 	//DBCP로 변경 
@@ -23,7 +22,7 @@
   Connection con = ds.getConnection();                        //커넥션 풀로부터 커넥션 객체를 얻어냄 
   
 	//3. SQL문 
-	String sql = "insert into user(email, pwd, name, birth, gender) values(?,?,?,?,?)";  // 테이블에 값을 추가하기 위한 쿼리문 String 객체에 저장 
+	String sql = "insert into user(email, pwd, name, birth) values(?,?,?,?)";  // 테이블에 값을 추가하기 위한 쿼리문 String 객체에 저장 
 	
 	//4. SQL 실헹 
 	PreparedStatement pstmt = con.prepareStatement(sql);  // PreparedStatement 객체 선언 
@@ -31,7 +30,6 @@
 	pstmt.setString(2,pwd);   // pstmt에 ID 값 셋팅 
 	pstmt.setString(3,name);  // pstmt에 패스워드 값 셋팅 
 	pstmt.setString(4,birth);
-	pstmt.setString(5,gender);
 	
 	// 26-29 위에서 넣어준 sql문의 데이터 순서에 맞게 작성
 	int i = pstmt.executeUpdate();

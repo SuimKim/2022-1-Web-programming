@@ -12,7 +12,6 @@
   String title = request.getParameter("title");    // String 객체에 받아온 비밀번호 값 저장 
   String contents = request.getParameter("contents");  // String 객체에 받아온 이름 값 저장
 
-
 	//DBCP로 변경 
 	Context initCtx = new InitialContext();                     //Context 객체 얻기 
   Context envCtx = (Context)initCtx.lookup("java:comp/env");  //"java:comp/env"에 해당하는 객체를 찾아서 envCtx에 삽입 
@@ -29,7 +28,7 @@
 
 	
 	// 26-29 위에서 넣어준 sql문의 데이터 순서에 맞게 작성
-	int i = pstmt.executeUpdate();
+int i = pstmt.executeUpdate();
 	
 	//5. 객체 해지 
   pstmt.close();

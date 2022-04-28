@@ -36,7 +36,6 @@
 			<th>이메일</th>    <!-- 필드 -->
 			<th>이름</th>
 			<th>생년월일</th>
-			<th>성별</th>
 		</tr>
 		<tr>
 <%
@@ -45,13 +44,12 @@
 			String email = rs.getString("email");      // 입력된 ID 받아오기 
 			String name = rs.getString("name");	 // 입력한 NAME 받아오기 
 			String birth = rs.getString("birth");	   // 입력한 PWD 받아오기 
-			String gender = rs.getString("gender");	
 %>
 
   		<td><a href="updateUser.jsp?email=<%=email %>"><%=email %></a></td>    <!--표에 데이터 베이스 출력 -->
   		<td><%=name%></td>
   		<td><%=birth%></td>
-  		<td><%=gender%></td>
+
   		</tr>
 <%
 			} 

@@ -14,11 +14,11 @@
 	Connection con = ds.getConnection();                        //커넥션 풀로부터 커넥션 객체를 얻어냄 
 
 	//SQL문 
-	String sql = "delete from post where title=?";  // 특정 ID가 속한 행을 지우는 쿼리문 
+	String sql = "delete from post where postno=?";  // 특정 ID가 속한 행을 지우는 쿼리문 
 	
 	//SQL 실헹 
 	PreparedStatement pstmt = con.prepareStatement(sql);  // PreparedStatement 객체 선언  
-	pstmt.setString(1, request.getParameter("title"));       // pstmt에 입력받아온 ID 값 셋팅 
+	pstmt.setString(1, request.getParameter("postno"));       // pstmt에 입력받아온 ID 값 셋팅 
 
 	
 	int i = pstmt.executeUpdate();  // 정적쿼리, int 값 반환 

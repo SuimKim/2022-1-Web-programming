@@ -33,6 +33,7 @@
 	<table class="table table-bordered">
 	<h2>글목록</h2>
 		<tr>   <!-- 필드 -->
+			<th>글번호</th>
 			<th>제목</th>
 			<th>내용</th>
 		</tr>
@@ -40,11 +41,13 @@
 <%
   	//4. 반환데이터 출력
 	  while(rs.next()){
+		  String postno = rs.getString("postno");
 			String title = rs.getString("title");	 // 입력한 NAME 받아오기 
 			String contents = rs.getString("contents");	   // 입력한 PWD 받아오기 ;	
 %>
 
-  		<td><a href="postUpdate.jsp?email=<%=title %>"><%=title %></a></td>
+  		<td><a href="postUpdate.jsp?postno=<%=postno %>"><%=postno %></a></td>
+  		<td><%=title%></td>
   		<td><%=contents%></td>
   		</tr>
 <%
