@@ -46,7 +46,7 @@
 
 <div class="container">
   <h2>회원정보변경</h2>
-  <form action="joinPro.jsp" method="post">
+  <form action="updateUserPro.jsp" method="post">
     <div class="form-group">
       <input type="email" class="form-control" id="email" placeholder="이메일" name="email" value="<%=email %>">
     </div>
