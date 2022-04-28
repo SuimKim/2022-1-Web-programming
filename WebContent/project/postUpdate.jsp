@@ -16,15 +16,15 @@
 	//3. SQL 처리 
 	String sql = "select * from post where postno=?";       // 특정 ID가 속한 행을 검색하는 쿼리문 
 	PreparedStatement pstmt = con.prepareStatement(sql); // PreparedStatement 객체 선언 
-	pstmt.setString(1,postno);                // pstmt에 ID 값 셋팅 
+	pstmt.setString(1,postno);               
 	ResultSet rs = pstmt.executeQuery();  // sql문 실행 후 레코드셋을 반환할 ResultSet 객체 선언 
 	String contents = "";
 	String title = "";
 	
 	if(rs.next()){    // rs 객체에서 결과값 받아오기 
 		postno = rs.getString("postno");
-		title = rs.getString("title");  // name 값 받아와서 객체에 넣어주기 
-		contents = rs.getString("contents");    // pwd 값 받아와서 객체에 넣어주기
+		title = rs.getString("title");  
+		contents = rs.getString("contents");   
 	}
 	
 	//4. 객체 해지 
@@ -51,13 +51,13 @@
   
   <form action="postUpdatePro.jsp" method="post">
   	<p>글번호</p>
-    <textarea class="form-control" rows="1" id="comment" name="postno"></textarea>
+    <textarea class="form-control" rows="1" id="comment" name="postno" readonly><%=postno%></textarea>
     <p>제목</p>
-    <textarea class="form-control" rows="1" id="comment" name="title"></textarea>
+    <textarea class="form-control" rows="1" id="comment" name="title"><%=title%></textarea>
     <br>
     <div class="form-group">
       <label for="comment">내용</label>
-      <textarea class="form-control" rows="10" id="comment" name="contents"></textarea>
+      <textarea class="form-control" rows="10" id="comment" name="contents"><%=contents%></textarea>
     </div>
     <button type="submit" class="btn btn-primary">수정하기</button>
     <button type="button" class="btn btn-primary" onclick="location.href='postDelete.jsp?postno=<%=postno %>'">삭제하기</button> <!-- URL에 쿼리스트링 넣어주기 -->

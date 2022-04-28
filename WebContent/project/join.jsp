@@ -28,10 +28,10 @@
     <div class="form-group">
       <input type="text" class="form-control" id="birth" placeholder="생년월일(0000-00-00 형식)" name="birth">
     </div>
-    <div class="form-group">
+     <div class="form-group">
       <select class="form-control" id="gender" name="gender">
-      	<option value="male" selected>남성</option>
-        <option value="female">여성</option>
+      	<option value="남성" selected>남성</option>
+        <option value="여성">여성</option>
         <option value="none">선택하지 않음</option>
       </select>
     </div>

@@ -16,7 +16,6 @@
 <div class="container">
   <br>
   <h2>게시판 글쓰기</h2>
-  
   <form action="postPro.jsp" method="post">
     <p>제목</p>
     <textarea class="form-control" rows="1" id="comment" name="title"></textarea>

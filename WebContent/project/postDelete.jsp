@@ -18,7 +18,7 @@
 	
 	//SQL 실헹 
 	PreparedStatement pstmt = con.prepareStatement(sql);  // PreparedStatement 객체 선언  
-	pstmt.setString(1, request.getParameter("postno"));       // pstmt에 입력받아온 ID 값 셋팅 
+	pstmt.setString(1, request.getParameter("postno"));       
 
 	
 	int i = pstmt.executeUpdate();  // 정적쿼리, int 값 반환 

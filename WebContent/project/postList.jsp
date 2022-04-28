@@ -13,7 +13,7 @@
 	Connection con = ds.getConnection();                        //커넥션 풀로부터 커넥션 객체를 얻어냄 
 	
   //연결 설정 
-  String sql = "select * from post";      // login 테이블을 검색 
+  String sql = "select * from post";      
   Statement stmt = con.createStatement();  // Statement 객체 선언 
 	ResultSet rs = stmt.executeQuery(sql);   // sql문 실행 후 레코드셋을 반환할 ResultSet 객체 선언  
 %>
@@ -31,6 +31,7 @@
 <body>
 <div class="container">
 	<table class="table table-bordered">
+	<br>
 	<h2>글목록</h2>
 		<tr>   <!-- 필드 -->
 			<th>글번호</th>
@@ -42,8 +43,8 @@
   	//4. 반환데이터 출력
 	  while(rs.next()){
 		  String postno = rs.getString("postno");
-			String title = rs.getString("title");	 // 입력한 NAME 받아오기 
-			String contents = rs.getString("contents");	   // 입력한 PWD 받아오기 ;	
+			String title = rs.getString("title");	 
+			String contents = rs.getString("contents");	  
 %>
 
   		<td><a href="postUpdate.jsp?postno=<%=postno %>"><%=postno %></a></td>

@@ -23,12 +23,12 @@
 	
 	//4. SQL 실헹 
 	PreparedStatement pstmt = con.prepareStatement(sql);  // PreparedStatement 객체 선언 
-	pstmt.setString(1,title);   // pstmt에 ID 값 셋팅 
-	pstmt.setString(2,contents);  // pstmt에 패스워드 값 셋팅 
+	pstmt.setString(1,title);   
+	pstmt.setString(2,contents);  
 
 	
-	// 26-29 위에서 넣어준 sql문의 데이터 순서에 맞게 작성
-int i = pstmt.executeUpdate();
+
+	int i = pstmt.executeUpdate();
 	
 	//5. 객체 해지 
   pstmt.close();

@@ -5,12 +5,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>중고장터</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+<div class="container">
+<br>
 	<h2>중고장터</h2>
 	<hr>
-	<button type="button" onclick="location.href='join.jsp'">회원가입</button>        <!-- 버튼 클릭 시 list 파일로 이동 -->
-	<button type="button" onclick="location.href='post.jsp'">게시판</button>  <!-- 버튼 클릭 시 insertForm 파일로 이동 -->
-	
+	<button type="button" class="btn btn-primary" onclick="location.href='join.jsp'">회원가입</button>
+	<button type="button" class="btn btn-primary" onclick="location.href='post.jsp'">게시판</button>  
+</div>
 </body>
 </html>

@@ -14,11 +14,11 @@
 	Connection con = ds.getConnection();                        //커넥션 풀로부터 커넥션 객체를 얻어냄 
 
 	//SQL문 
-	String sql = "delete from user where email=?";  // 특정 ID가 속한 행을 지우는 쿼리문 
+	String sql = "delete from user where email=?";  // 특정 이메일 속한 행을 지우는 쿼리문 
 	
 	//SQL 실헹 
 	PreparedStatement pstmt = con.prepareStatement(sql);  // PreparedStatement 객체 선언  
-	pstmt.setString(1, request.getParameter("email"));       // pstmt에 입력받아온 ID 값 셋팅 
+	pstmt.setString(1, request.getParameter("email"));    
 
 	
 	int i = pstmt.executeUpdate();  // 정적쿼리, int 값 반환 
